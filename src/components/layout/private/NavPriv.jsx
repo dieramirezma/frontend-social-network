@@ -25,13 +25,6 @@ export const NavPriv = () => {
             <span className='menu-list__title'>Gente</span>
           </a>
         </li>
-
-        <li className='menu-list__item'>
-          <a href='#' className='menu-list__link'>
-            <i className='fa-regular fa-envelope' />
-            <span className='menu-list__title'>Mensajes</span>
-          </a>
-        </li>
       </ul>
 
       <ul className='container-lists__list-end'>
