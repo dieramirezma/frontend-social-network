@@ -15,14 +15,13 @@ export const Routing = () => {
           <Route index element={<Login />} />
           <Route path='login' element={<Login />} />
           <Route path='register' element={<Register />} />
-          <Route path='*' element={<Error404 />} />
         </Route>
         {/* Private Routes */}
         <Route path='/social' element={<PrivateLayout />}>
           <Route index element={<Feed />} />
           <Route path='feed' element={<Feed />} />
-          <Route path='*' element={<Error404 />} />
         </Route>
+        <Route path='*' element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   )
