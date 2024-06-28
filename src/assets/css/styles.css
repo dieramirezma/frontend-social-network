@@ -437,3 +437,22 @@ button{
     font-size: 1.4rem;
 }
 
+.form-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    /* Limita el ancho del formulario */
+    padding: 2rem;
+    /* Agrega algo de padding alrededor del formulario */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Opcional: agrega una sombra */
+    border-radius: 10px;
+    /* Opcional: redondea las esquinas */
+    background-color: #fff;
+    /* Opcional: establece un color de fondo */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+}
