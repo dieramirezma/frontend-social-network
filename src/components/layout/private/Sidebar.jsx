@@ -1,11 +1,17 @@
 import avatar from '../../../assets/img/user.png'
+import { Global } from '../../../helpers/Global'
+import useAuth from '../../../hooks/useAuth'
 
 export const Sidebar = () => {
+  const { auth, counters } = useAuth()
+
+  console.log(auth, counters)
+
   return (
     <aside className='layout__aside'>
 
       <header className='aside__header'>
-        <h1 className='aside__title'>Hola, Inés</h1>
+        <h1 className='aside__title'>Hola, {auth.name} </h1>
       </header>
 
       <div className='aside__container'>
@@ -14,12 +20,14 @@ export const Sidebar = () => {
 
           <div className='profile-info__general-info'>
             <div className='general-info__container-avatar'>
-              <img src={avatar} className='container-avatar__img' alt='Foto de perfil' />
+              {auth.image !== 'default.png' && <img src={Global.API_URL + 'user/avatar/' + auth.image} className='container-avatar__img' alt='Foto de perfil' />}
+              {auth.image === 'default.png' && <img src={avatar} className='container-avatar__img' alt='Foto de perfil' />}
+
             </div>
 
             <div className='general-info__container-names'>
-              <a href='#' className='container-names__name'>Inés Oliveros</a>
-              <p className='container-names__nickname'>InésWeb</p>
+              <a href='#' className='container-names__name'> {auth.name} {auth.last_name} </a>
+              <p className='container-names__nickname'> {auth.nick} </p>
             </div>
           </div>
 
@@ -28,20 +36,20 @@ export const Sidebar = () => {
             <div className='stats__following'>
               <a href='#' className='following__link'>
                 <span className='following__title'>Siguiendo</span>
-                <span className='following__number'>10</span>
+                <span className='following__number'> {counters.following} </span>
               </a>
             </div>
             <div className='stats__following'>
               <a href='#' className='following__link'>
                 <span className='following__title'>Seguidores</span>
-                <span className='following__number'>13</span>
+                <span className='following__number'> {counters.followed} </span>
               </a>
             </div>
 
             <div className='stats__following'>
               <a href='#' className='following__link'>
                 <span className='following__title'>Publicaciones</span>
-                <span className='following__number'>17</span>
+                <span className='following__number'>  {counters.publications} </span>
               </a>
             </div>
 
