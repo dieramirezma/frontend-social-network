@@ -6,6 +6,7 @@ import { PublicLayout } from '../components/layout/public/PublicLayout'
 import { Feed } from '../components/publication/Feed'
 import { Error404 } from '../components/layout/Error404'
 import { AuthProvider } from '../context/AuthProvider'
+import { Logout } from '../components/user/Logout'
 
 export const Routing = () => {
   return (
@@ -22,6 +23,7 @@ export const Routing = () => {
           <Route path='/social' element={<PrivateLayout />}>
             <Route index element={<Feed />} />
             <Route path='feed' element={<Feed />} />
+            <Route path='logout' element={<Logout />} />
           </Route>
           <Route path='*' element={<Error404 />} />
         </Routes>

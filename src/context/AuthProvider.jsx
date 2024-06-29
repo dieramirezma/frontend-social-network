@@ -13,6 +13,9 @@ export const AuthProvider = ({ children }) => {
   // Estado para guardar los contadores
   const [counters, setCounters] = useState({})
 
+  // Estado para configurar la carga de los elementos del perfil y se actualizará al final cuando todo la carga esté lista
+  const [loading, setLoading] = useState(true)
+
   // La primera vez que se ejecute este contexto, se comprueba el token ejecutando authUser
   useEffect(() => {
     authUser()
@@ -25,6 +28,7 @@ export const AuthProvider = ({ children }) => {
 
     // Comprobar si tengo el token y el user
     if (!token || !user) {
+      setLoading(false)
       return false
     }
 
@@ -59,6 +63,9 @@ export const AuthProvider = ({ children }) => {
 
     // Setear el estado de Counters
     setCounters(dataCounters)
+
+    // Setear el estado de loading
+    setLoading(false)
   }
 
   // Renderizar el proveedor de contexto con el contexto AuthContext.Provider
@@ -68,7 +75,9 @@ export const AuthProvider = ({ children }) => {
         // Valores que se comparten a través del contexto
         auth,
         setAuth,
-        counters
+        counters,
+        setCounters,
+        loading
       }}
     >
       {children} {/* Renderiza los componentes hijos envueltos por el proveedor */}

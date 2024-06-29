@@ -483,3 +483,11 @@ button {
     margin: 0 auto;
     /* Centrar horizontalmente */
 }
+
+.img-avatar-nav {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    overflow: hidden;
+}
