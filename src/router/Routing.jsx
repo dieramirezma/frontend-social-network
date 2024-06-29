@@ -7,6 +7,8 @@ import { Feed } from '../components/publication/Feed'
 import { Error404 } from '../components/layout/Error404'
 import { AuthProvider } from '../context/AuthProvider'
 import { Logout } from '../components/user/Logout'
+import { People } from '../components/user/People'
+import { Config } from '../components/user/Config'
 
 export const Routing = () => {
   return (
@@ -24,6 +26,8 @@ export const Routing = () => {
             <Route index element={<Feed />} />
             <Route path='feed' element={<Feed />} />
             <Route path='logout' element={<Logout />} />
+            <Route path='gente' element={<People />} />
+            <Route path='ajustes' element={<Config />} />
           </Route>
           <Route path='*' element={<Error404 />} />
         </Routes>
