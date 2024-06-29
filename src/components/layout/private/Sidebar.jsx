@@ -5,8 +5,6 @@ import useAuth from '../../../hooks/useAuth'
 export const Sidebar = () => {
   const { auth, counters } = useAuth()
 
-  console.log(auth, counters)
-
   return (
     <aside className='layout__aside'>
 

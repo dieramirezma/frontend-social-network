@@ -53,8 +53,6 @@ export const Register = () => {
         confirmButtonText: 'Intentar nuevamente'
       })
     }
-
-    console.log(data)
   }
 
   return (
