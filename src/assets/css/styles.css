@@ -54,8 +54,8 @@ body {
 
 .layout{
     display: grid;
-    grid-template-areas: 
-        "nav nav " 
+    grid-template-areas:
+        "nav nav "
         "content aside";
     grid-template-rows: 60px auto auto;
     grid-template-columns: 70% 30%;
@@ -238,7 +238,7 @@ body {
 .post__buttons{
     display: flex;
     align-items: center;
- 
+
 }
 
 .post__button{
@@ -278,12 +278,12 @@ body {
 .layout__aside{
     grid-area: aside;
     margin-right: 2rem;
-    
+
 }
 
 .aside__container{
     width: 100%;
-    
+
 }
 
 .aside__profile-info{
@@ -377,7 +377,7 @@ form{
     max-width: 100%;
 }
 
-.form-post__inputs, 
+.form-post__inputs,
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -478,3 +478,14 @@ button{
     margin-right: 1.5rem;
     overflow: hidden;
 }
+
+.post__button--green {
+    background-color: var(--color-background-btn-success);
+    border-color: var(--color-border-btn-success);
+}
+
+.post__button.post__button--green:hover {
+    background-color: var(--color-background-btn-success-hover);
+    border-color: var(--color-border-btn-success-hover);
+}
+

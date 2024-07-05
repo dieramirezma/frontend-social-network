@@ -26,7 +26,7 @@ export const NavPriv = () => {
         </li>
 
         <li className='menu-list__item'>
-          <NavLink to='/social/gente' className='menu-list__link'>
+          <NavLink to='/social/people' className='menu-list__link'>
             <i className='fa-solid fa-users' />
             <span className='menu-list__title'>Gente</span>
           </NavLink>
@@ -46,7 +46,7 @@ export const NavPriv = () => {
           </a>
         </li>
         <li className='list-end__item'>
-          <NavLink to='/social/ajustes' className='list-end__link'>
+          <NavLink to='/social/settings' className='list-end__link'>
             <i className='fa-solid fa-gear' />
             <span className='list-end__name'>Ajustes</span>
           </NavLink>
