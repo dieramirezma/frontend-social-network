@@ -41,12 +41,10 @@ export const People = () => {
 
       // Obtener la información retornada por la request
       const data = await response.json()
-      console.log('User Data', data)
       // Usar la variable de estado para asignar el array de usuarios que sigues recibido
       if (data.users && data.status === 'success') {
         // Filtrar usuarios para excluir al usuario autenticado
         const filteredUsers = data.users.filter(user => user._id !== auth._id)
-        console.log(filteredUsers)
         let newUsers = filteredUsers
 
         if (users.length >= 1) {

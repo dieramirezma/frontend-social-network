@@ -34,7 +34,6 @@ export const UserList = ({ users, getUsers, following, setFollowing, more, page,
     // Obtener la información retornada por la request
     const data = await request.json()
 
-    console.log('User Data', data)
     if (data.status === 'success') {
       // Actualizar el estado de following, agregando al nuevo usuario seguido al array de following
       setFollowing([...following, userId])
@@ -54,7 +53,6 @@ export const UserList = ({ users, getUsers, following, setFollowing, more, page,
 
     // Obtener la información retornada por la request
     const data = await request.json()
-    console.log('User Data', data)
     // Actualizar el estado de unfollow para eliminar el follow
     if (data.status === 'success') {
       // Actualizar el estado de following, filtrando los datos para eliminar el antiguo follow (userId)
